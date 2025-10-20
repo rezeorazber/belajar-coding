@@ -1,0 +1,25 @@
+print("===== Cuaca =====")
+print("1. Cerah")
+print("2. Berawan")
+print("3. Hujan")
+
+cuaca_sekarang = input("Masukan cuaca saat ini (1,2,3): ")
+if cuaca_sekarang == "1":
+    waktu_lama = float(input("Masukan lama waktu (menit): "))
+    if waktu_lama > 30:
+        print("Jalan")
+    elif waktu_lama <= 30:
+        print("Naik Bus")
+        
+elif cuaca_sekarang == "2":
+    lapar = input("Apakah lapar (ya/tidak): ")
+    if lapar == "ya":
+        print("Jalan")
+    elif lapar == "tidak":
+        print("Naik Bus")
+        
+elif cuaca_sekarang == "3":
+    print("Naik Bus")
+
+else:
+    print("Cuaca tidak dikenali")
