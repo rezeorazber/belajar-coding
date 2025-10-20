@@ -1,0 +1,23 @@
+print("===== Electrical Bills =====")
+kwh = float(input("Masukan jumlah kWh yang digunakan: "))
+pembayaran = input("Apakah pembayaran melalui PLN Mobile [ya/tidak]: ")
+
+if kwh <= 100:
+    tagihan_dasar = kwh * 1000
+elif kwh <= 300:
+    tagihan_dasar = (100 * 1000) + ((kwh - 100) * 1500)
+else:
+    tagihan_dasar = (100 * 1000) + (200 * 1500) + ((kwh - 300) * 2000)
+    
+if tagihan_dasar > 500000:
+    total_tagihan = tagihan_dasar + (tagihan_dasar * 1.05)
+elif tagihan_dasar < 500000:
+    total_tagihan = tagihan_dasar
+
+if pembayaran == "ya":
+    diskon = total_tagihan - (total_tagihan * 0.98)
+    print("Total tagihan listrik anda adalah" , diskon)
+elif pembayaran == "tidak":
+    print("Total tagihan listrik anda adalah " , total_tagihan)
+else:
+    print("Pilihan pembayaran tidak valid, diskon tidak diterapkan.")
