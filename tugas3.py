@@ -54,5 +54,8 @@ if login(input_nim_user, input_password_user):
             
         elif pilihan_menu == "3":
             print("Terima kasih sudah berkunjung!")
+        else:
+            print("Input tidak valid, program dihentikan")
             break
+
 
